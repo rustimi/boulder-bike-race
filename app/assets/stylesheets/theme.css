@@ -64,9 +64,10 @@ p {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-.btn-primary{
+.btn-primary, .btn-primary:hover    {
     color: #F6F7EB;
 }
+
 
 #mainNav {
     background-color: rgba(var(--bs-secondary-rgb), 0.9);
