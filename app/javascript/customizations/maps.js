@@ -7,7 +7,7 @@ async function initMap() {
     const position = { lat: 40.0187488, lng: -105.2607357 };
 
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement,  PinElement} = await google.maps.importLibrary("marker");
+    const { AdvancedMarkerElement} = await google.maps.importLibrary("marker");
 
     // The map, centered at Boulder
     map = new Map(document.querySelector("#map"), {
@@ -24,11 +24,20 @@ async function initMap() {
     });
 
     const infoWindow = new InfoWindow();
-    marker.addListener("click", ({ domEvent, latLng }) => {
-        const { target } = domEvent;
+    marker.addListener("click", ({}) => {
 
         infoWindow.close();
-        infoWindow.setContent(marker.title);
+        let infoCard = '' +
+            '<div class="intro-text left-0 text-center bg-faded p-5 rounded">\n' +
+            '        <h2 class="section-heading mb-4">\n' +
+            '          <span class="section-heading-upper">What is about</span>\n' +
+            '        </h2>\n' +
+            '        <p class="mb-3">test123</p>\n' +
+            '        <div class="intro-button mx-auto">\n' +
+            '          <a class="btn btn-primary" href="#!">Go to User!</a></div>\n' +
+            '      </div>'
+
+        infoWindow.setContent(infoCard);
         infoWindow.open(marker.map, marker);
     });
 
