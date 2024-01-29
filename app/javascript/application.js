@@ -2,3 +2,4 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import "./customizations/countdown-timer"
+import "./customizations/maps"

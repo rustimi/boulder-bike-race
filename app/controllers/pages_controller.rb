@@ -27,6 +27,15 @@ class PagesController < ApplicationController
   end
 
   def location
+    file_path = Rails.root.join('config', 'google-maps-api.key')
+
+    if File.exist?(file_path)
+      File.open(file_path, 'r') do |file|
+        # Read the content of the file (assuming it contains only one line)
+        @MAP_API_SECRET = file.readline.strip
+      end
+    end
+
 
   end
 end
