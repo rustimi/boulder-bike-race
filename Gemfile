@@ -40,6 +40,9 @@ gem 'bootstrap', '~> 5.3', '>= 5.3.2'
 # and SASSc for bootstrap
 gem 'sassc-rails'
 
+# Add Flickr integration
+gem 'flickr'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
