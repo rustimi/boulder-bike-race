@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get "/photos", to: "pages#photos"
   get "/photos/:id", to: "pages#photos"
+
+  get "/location", to: "pages#location"
+
   # Defines the root path route ("/")
   root "pages#home"
 end

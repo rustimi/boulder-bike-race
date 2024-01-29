@@ -24,6 +24,9 @@ class PagesController < ApplicationController
     else
       @page_id_next = 2
     end
+  end
+
+  def location
 
   end
 end
