@@ -1,31 +1,26 @@
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
+
 // Initialize and add the map
 let map;
 
 async function initMap() {
-    // The location of Uluru
-    const position = { lat: -25.344, lng: 131.031 };
-    // Request needed libraries.
-    //@ts-ignore
+    // The location of Boulder
+    const position = { lat: 40.0187488, lng: -105.2607357 };
+
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-    // The map, centered at Uluru
+    // The map, centered at Boulder
     map = new Map(document.getElementById("map"), {
-        zoom: 4,
+        zoom: 12,
         center: position,
-        mapId: "DEMO_MAP_ID",
+        mapId: "BOULDER_MAP",
     });
 
-    // The marker, positioned at Uluru
+    // The marker
     const marker = new AdvancedMarkerElement({
         map: map,
         position: position,
-        title: "Uluru",
+        title: "Boulder",
     });
 }
 
