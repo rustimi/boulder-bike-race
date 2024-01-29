@@ -33,3 +33,7 @@
     </div>
   </div>
 </section>
+
+<% content_for :page_specific_js do %>
+  <%= javascript_include_tag "customizations/countdown-timer" %>
+<% end %>
