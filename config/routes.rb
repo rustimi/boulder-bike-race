@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "/photos", to: "pages#photos"
+  get "/photos/:id", to: "pages#photos"
   # Defines the root path route ("/")
   root "pages#home"
 end

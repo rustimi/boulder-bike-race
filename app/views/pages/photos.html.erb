@@ -1,1 +1,50 @@
-<%= image_tag @photo%>
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="countdown-container">
+          <p class="h1">Capture the Thrills!</p>
+          <p class="text-faded">#BoulderBikeTour #bikerace</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page-section clearfix">
+  <div class="container">
+
+    <div class="row mb-3 justify-content-between">
+      <% if @page_id_prev.present? %>
+        <%= link_to "Previous", photos_path(id: @page_id_prev), class: "btn btn-primary btn-xl ml-5 mr-2 col-lg-1 col-6" %>
+      <% end %>
+      <%= link_to "Next", photos_path(id: @page_id_next), class: "btn btn-primary btn-xl col-lg-1 col-6" %>
+    </div>
+
+    <% @photos.each_slice(6) do |photo1, photo2, photo3, photo4, photo5, photo6| %>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <%= image_tag photo1, class: "w-100 shadow-1-strong rounded mb-4" %>
+          <%= image_tag photo2, class: "w-100 shadow-1-strong rounded mb-4" %>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <%= image_tag photo3, class: "w-100 shadow-1-strong rounded mb-4" %>
+          <%= image_tag photo4, class: "w-100 shadow-1-strong rounded mb-4" %>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <%= image_tag photo5, class: "w-100 shadow-1-strong rounded mb-4" %>
+          <%= image_tag photo6, class: "w-100 shadow-1-strong rounded mb-4" %>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="row mb-3 justify-content-between">
+      <% if @page_id_prev.present? %>
+        <%= link_to "Previous", photos_path(id: @page_id_prev), class: "btn btn-primary btn-xl ml-5 mr-2 col-lg-1 col-6" %>
+      <% end %>
+      <%= link_to "Next", photos_path(id: @page_id_next), class: "btn btn-primary btn-xl col-lg-1 col-6" %>
+    </div>
+
+  </div>
+</section>
