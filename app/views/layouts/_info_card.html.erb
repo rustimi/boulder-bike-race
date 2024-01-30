@@ -6,8 +6,10 @@
      - title_lower: The lower part of the section heading
      - cta_btn_text: Text for the call-to-action button
      - cta_btn_link: URL link for the call-to-action button
+     - button_size: size of the cta button (accepted: xl | s)
+     - btn_type: bootstrap button classes  (eg. primary, secondary, outline-primary)
 -->
-<%# locals: (title_upper:, body_text:, title_lower: nil, cta_btn_text: nil, cta_btn_link: nil) -%>
+<%# locals: (title_upper:, body_text:, title_lower: nil, cta_btn_text: nil, cta_btn_link: nil, button_size: 'xl', btn_type: 'primary') -%>
 
 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
   <h2 class="section-heading mb-4">
@@ -19,7 +21,7 @@
   <p class="mb-3"><%= body_text %></p>
   <% if cta_btn_text %>
     <div class="intro-button mx-auto">
-      <a class="btn btn-primary btn-xl" href="<%= cta_btn_link %>"><%= cta_btn_text %></a>
+      <%= link_to cta_btn_text, cta_btn_link, class: "btn btn-#{btn_type} btn-#{button_size}" %>
     </div>
   <% end %>
 </div>
