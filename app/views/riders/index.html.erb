@@ -1,7 +1,5 @@
-<h1>Riders#index</h1>
-<p>Find me in app/views/riders/index.html.erb</p>
 
-<% @riders.each do |rider| %>
-  <p><%= rider.fname %></p>
-  <p><%= rider.lname %></p>
-<% end %>
+<%= render partial: "layouts/info_card", locals: {
+  title_upper: 'What is about',
+  body_text: "The Boulder Bike Race is an annual cycling event set against the breathtaking backdrop of Boulder, Colorado. This thrilling race attracts cyclists of all levels, from seasoned professionals to enthusiastic amateurs, who converge on the scenic city to test their skills and endurance. Held on April 1st each year, participants navigate through challenging terrain, including rolling hills, winding roads, and scenic trails, showcasing the natural beauty of the Rocky Mountains. With its vibrant atmosphere and competitive spirit, the Boulder Bike Race promises an exhilarating experience for riders and spectators alike, celebrating the joy of cycling and the spirit of community in one of America's most picturesque locations."
+} %>

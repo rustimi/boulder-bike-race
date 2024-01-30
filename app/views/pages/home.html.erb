@@ -2,15 +2,13 @@
   <div class="container">
     <div class="intro">
       <%= image_tag('intro.jpg', class: 'intro-img img-fluid mb-3 mb-lg-0 rounded') %>
-      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-upper">What is about</span>
-          <span class="section-heading-lower">The race</span>
-        </h2>
-        <p class="mb-3">The "Boulder Bike Race" is an annual cycling event set against the breathtaking backdrop of Boulder, Colorado. This thrilling race attracts cyclists of all levels, from seasoned professionals to enthusiastic amateurs, who converge on the scenic city to test their skills and endurance. Held on April 1st each year, participants navigate through challenging terrain, including rolling hills, winding roads, and scenic trails, showcasing the natural beauty of the Rocky Mountains. With its vibrant atmosphere and competitive spirit, the Boulder Bike Race promises an exhilarating experience for riders and spectators alike, celebrating the joy of cycling and the spirit of community in one of America's most picturesque locations.</p>
-        <div class="intro-button mx-auto">
-          <a class="btn btn-primary btn-xl" href="#!">Send your slogan!</a></div>
-      </div>
+      <%= render partial: "layouts/info_card", locals: {
+        title_upper: 'What is about',
+        title_lower: 'The race',
+        body_text: "The Boulder Bike Race is an annual cycling event set against the breathtaking backdrop of Boulder, Colorado. This thrilling race attracts cyclists of all levels, from seasoned professionals to enthusiastic amateurs, who converge on the scenic city to test their skills and endurance. Held on April 1st each year, participants navigate through challenging terrain, including rolling hills, winding roads, and scenic trails, showcasing the natural beauty of the Rocky Mountains. With its vibrant atmosphere and competitive spirit, the Boulder Bike Race promises an exhilarating experience for riders and spectators alike, celebrating the joy of cycling and the spirit of community in one of America's most picturesque locations.",
+        cta_btn_text: 'Send your slogan!',
+        cta_btn_link: '#!'
+      } %>
     </div>
   </div>
 </section>

@@ -1,0 +1,25 @@
+<!-- Required parameters:
+     - title_upper: The upper part of the section heading
+     - body_text: The main body text of the section
+-->
+<!-- Optional parameters:
+     - title_lower: The lower part of the section heading
+     - cta_btn_text: Text for the call-to-action button
+     - cta_btn_link: URL link for the call-to-action button
+-->
+<%# locals: (title_upper:, body_text:, title_lower: nil, cta_btn_text: nil, cta_btn_link: nil) -%>
+
+<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+  <h2 class="section-heading mb-4">
+    <span class="section-heading-upper"><%= title_upper %></span>
+    <% if title_lower %>
+      <span class="section-heading-lower"><%= title_lower %></span>
+    <% end %>
+  </h2>
+  <p class="mb-3"><%= body_text %></p>
+  <% if cta_btn_text %>
+    <div class="intro-button mx-auto">
+      <a class="btn btn-primary btn-xl" href="<%= cta_btn_link %>"><%= cta_btn_text %></a>
+    </div>
+  <% end %>
+</div>
