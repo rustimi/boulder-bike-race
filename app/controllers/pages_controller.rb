@@ -36,6 +36,15 @@ class PagesController < ApplicationController
       end
     end
 
+    @riders_info = Rider.all.map do |rider|
+      {
+        'fname': rider.fname,
+        'lname': rider.lname,
+        'lat': rider.latitude,
+        'long': rider.longitude,
+        'url': rider_path(rider)
+      }
+    end
 
   end
 end
