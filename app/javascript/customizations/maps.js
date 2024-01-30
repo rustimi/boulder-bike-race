@@ -16,30 +16,38 @@ async function initMap() {
         mapId: "BOULDER_MAP",
     });
 
+    rider_info.forEach((rider) => {
+        let rider_position = {lat: rider.lat, lng: rider.long};
+        new AdvancedMarkerElement({
+            map: map,
+            position: rider_position,
+            title: rider.fname,
+        });
+    })
     // The marker
-    const marker = new AdvancedMarkerElement({
-        map: map,
-        position: position,
-        title: "Boulder",
-    });
-
-    const infoWindow = new InfoWindow();
-    marker.addListener("click", ({}) => {
-
-        infoWindow.close();
-        let infoCard = '' +
-            '<div class="intro-text left-0 text-center bg-faded p-5 rounded">\n' +
-            '        <h2 class="section-heading mb-4">\n' +
-            '          <span class="section-heading-upper">What is about</span>\n' +
-            '        </h2>\n' +
-            '        <p class="mb-3">test123</p>\n' +
-            '        <div class="intro-button mx-auto">\n' +
-            '          <a class="btn btn-primary" href="#!">Go to User!</a></div>\n' +
-            '      </div>'
-
-        infoWindow.setContent(infoCard);
-        infoWindow.open(marker.map, marker);
-    });
+    // const marker = new AdvancedMarkerElement({
+    //     map: map,
+    //     position: position,
+    //     title: "Boulder",
+    // });
+    //
+    // const infoWindow = new InfoWindow();
+    // marker.addListener("click", ({}) => {
+    //
+    //     infoWindow.close();
+    //     let infoCard = '' +
+    //         '<div class="intro-text left-0 text-center bg-faded p-5 rounded">\n' +
+    //         '        <h2 class="section-heading mb-4">\n' +
+    //         '          <span class="section-heading-upper">What is about</span>\n' +
+    //         '        </h2>\n' +
+    //         '        <p class="mb-3">test123</p>\n' +
+    //         '        <div class="intro-button mx-auto">\n' +
+    //         '          <a class="btn btn-primary" href="#!">Go to User!</a></div>\n' +
+    //         '      </div>'
+    //
+    //     infoWindow.setContent(infoCard);
+    //     infoWindow.open(marker.map, marker);
+    // });
 
 
 }
