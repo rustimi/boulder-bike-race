@@ -1,3 +1,7 @@
 <h1>Riders#index</h1>
 <p>Find me in app/views/riders/index.html.erb</p>
-<%= @riders %>
+
+<% @riders.each do |rider| %>
+  <p><%= rider.fname %></p>
+  <p><%= rider.lname %></p>
+<% end %>
