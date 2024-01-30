@@ -1,0 +1,12 @@
+
+
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="row mb-3 justify-content-center">
+        <%= render partial: "layouts/info_card", locals: {
+          title_upper: "#{@rider.fname} #{@rider.lname}",
+          body_text: "#{@rider.city_origin} (#{@rider.state_origin})",
+        } %>
+    </div>
+  </div>
+</section>
