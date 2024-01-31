@@ -26,7 +26,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def location
+  def locations
     file_path = Rails.root.join('config', 'google-maps-api.key')
 
     if File.exist?(file_path)
