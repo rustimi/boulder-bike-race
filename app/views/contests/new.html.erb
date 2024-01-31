@@ -13,7 +13,7 @@
 <div class="container-fluid p-0 mb-2">
   <div class="form-container p-5">
     <h1 class="text-center pb-4">Share Your Slogan for the Boulder Bike Race!</h1>
-    <%= form_with(model: @contest, url: contests_path, local: true) do |form| %>
+    <%= form_with(model: @contest, local: true) do |form| %>
       <div class="form-group">
         <%= form.label :fname, "First Name:" %>
         <%= form.text_field :fname, class: "form-control" %>
