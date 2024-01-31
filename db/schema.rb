@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_31_185059) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_31_213804) do
   create_table "contests", force: :cascade do |t|
     t.string "fname", limit: 25
     t.string "lname", limit: 25
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_31_185059) do
     t.string "slogan", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_contests_on_email", unique: true
   end
 
   create_table "riders", force: :cascade do |t|
