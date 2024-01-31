@@ -1,0 +1,36 @@
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="countdown-container">
+          <p class="h1">Explore Our Riders' Journey!</p>
+          <p class="text-faded">Track Every Turn with us</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container-fluid p-0 mb-2">
+  <div class="form-container p-5">
+    <%= form_with(model: @contest, url: contests_path, local: true) do |form| %>
+      <div class="form-group">
+        <%= form.label :fname, "First Name:" %>
+        <%= form.text_field :fname, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label :lname, "Last Name:" %>
+        <%= form.text_field :lname, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label :email, "Email:" %>
+        <%= form.email_field :email, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label :slogan, "Slogan:" %>
+        <%= form.text_area :slogan, class: "form-control" %>
+      </div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
