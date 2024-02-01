@@ -1,0 +1,16 @@
+
+
+<section class="page-section clearfix">
+  <div class="container position-relative">
+    <div class="position-absolute w-100 top-0 start-0">
+    <%= render partial: "layouts/info_card", locals: {
+      title_upper: 'Slogan submitted',
+      title_lower: 'Thank you!',
+      body_text: "Thank you for submitting your slogan for the Boulder Bike Race contest!<br>Your creative contribution means a lot to us. We'll review all the submissions carefully, and your slogan could be the one that captures the spirit of our event.<br>Stay tuned to see if your slogan makes it to the final round. In the meantime, keep pedaling and enjoying the ride!<br>Thank you again for being a part of the Boulder Bike Race community.",
+      cta_btn_text: 'Track the team',
+      cta_btn_link: locations_path
+    } %>
+  </div>
+    <%= image_tag('thankyou.jpg', class: 'rounded w-100') %>
+  </div>
+</section>

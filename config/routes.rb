@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/contests", to: "contests#new"
   get "/photos", to: "pages#photos"
   get "/locations", to: "pages#locations"
+  get "/thankyou", to: "pages#thankyou"
 
   # Defines the root path route ("/")
   root "pages#home"

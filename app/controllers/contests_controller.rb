@@ -7,7 +7,7 @@ class ContestsController < ApplicationController
     @contest = Contest.new(contest_params)
 
     if @contest.save
-      # redirect_to @item
+      redirect_to thankyou_path
     else
       render :new, status: :unprocessable_entity
     end

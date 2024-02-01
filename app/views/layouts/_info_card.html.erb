@@ -18,7 +18,7 @@
       <span class="section-heading-lower"><%= title_lower %></span>
     <% end %>
   </h2>
-  <p class="mb-3"><%= body_text %></p>
+  <p class="mb-3"><%= simple_format(body_text) %></p>
   <% if cta_btn_text %>
     <div class="intro-button mx-auto">
       <%= link_to cta_btn_text, cta_btn_link, class: "btn btn-#{btn_type} btn-#{button_size}" %>
