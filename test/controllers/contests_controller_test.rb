@@ -11,7 +11,6 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create entry" do
-
     params = {
       contest: {
         fname: "Mario",
@@ -26,7 +25,6 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
 
 
   test "should not create entry" do
-
     params = {
       contest: {
         fname: "Mario",
@@ -44,9 +42,5 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
     params[:email] = "WrongFormat"
     post contests_url, params: params
     assert_response 422
-
-    
   end
-
-
 end
