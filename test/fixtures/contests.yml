@@ -1,12 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-user_one:
+one:
   fname: FirstName_1
   lname: LastName_1
   email: email_1@example.com
   slogan: ThisIsSloganTest_1
 
-user_two:
+two:
   fname: FirstName_2
   lname: LastName_2
   email: email_2@example.com

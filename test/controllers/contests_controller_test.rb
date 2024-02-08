@@ -1,10 +1,6 @@
 require "test_helper"
 
 class ContestsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @user_1 = contests(:user_one)
-  end
-
   test "should get new" do
     get new_contest_url
     assert_response :success
