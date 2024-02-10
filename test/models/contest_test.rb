@@ -22,11 +22,11 @@ class ContestTest < ActiveSupport::TestCase
   end
 
   test "duplicate email" do
-    user_1 = contests(:user_one)
+    user_1 = contests(:one)
     assert user_1.valid?, "Fixture not exising"
     assert user_1.email == "email_1@example.com", "Wrong email in fixture"
 
-    user_2 = contests(:user_two)
+    user_2 = contests(:two)
     assert user_2.valid?, "Fixture not exising"
     assert user_2.email == "email_2@example.com", "Wrong email in fixture"
 
