@@ -10,4 +10,15 @@ class RidersControllerTest < ActionDispatch::IntegrationTest
     get rider_path(Rider.first)
     assert_response :success
   end
+
+  test "should only GET riders" do
+    post riders_url
+    assert_response :missing
+
+    put riders_url
+    assert_response :missing
+
+    delete riders_url
+    assert_response :missing
+  end
 end

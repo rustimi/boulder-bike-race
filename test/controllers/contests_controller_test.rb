@@ -38,5 +38,25 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
     params[:email] = "WrongFormat"
     post contests_url, params: params
     assert_response 422
+
+    # missing first name
+    params[:email] = "user@example.com"
+    params[:fname] = ""
+    post contests_url, params: params
+    assert_response 422
+
+    # missing last name
+    params[:fname] = "Mario"
+    params[:lname] = ""
+    post contests_url, params: params
+    assert_response 422
+
+
+    # unexpected parameter
+    params[:lname] = "Rossi"
+    params[:unexpected_parameter] = 999
+    post contests_url, params: params
+    assert_response 422
+
   end
 end
