@@ -10,6 +10,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= yield :page_specific_js %>
+    <%= javascript_importmap_tags  %>
   </head>
 
   <body>
